@@ -165,6 +165,20 @@ bool HMC5883::begin()
     // Enable I2C
     Wire.begin();
 
+    // read identification registers
+    Wire.beginTransmission(HMC5883_ADDRESS_MAG); //open communication with HMC5883
+    Wire.write(10); //select Identification register A
+    Wire.endTransmission();
+    Wire.requestFrom(HMC5883_ADDRESS_MAG, 3);
+
+    if(3 == Wire.available()) {
+        char a = Wire.read();
+        char b = Wire.read();
+        char c = Wire.read();
+        if(! (a == 'H' && b == '4' && c == '3'))
+            return false;
+    }
+
     // Set the module to 8x averaging and 15Hz measurement rate
     write8(HMC5883_ADDRESS_MAG, HMC5883_REGISTER_MAG_CRA_REG_M, 0x70);
 
