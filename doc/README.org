@@ -1,0 +1,20 @@
+
+* Arduino
+  - WEMOS XI is a Arduino board based on LGT8F328D.
+    https://www.wemos.cc/product/wemos-xi.html
+
+* Compass
+  http://www.robotpark.com/image/data/PRO/91457/GY_271_ELECTRONIC_COMPASS.pdf
+  https://media.digikey.com/pdf/Data%20Sheets/Honeywell%20PDFs/HMC5883L.pdf
+  https://brainy-bits.com/blogs/tutorials/using-the-hmc5883l
+
+* Motor
+  https://learn.adafruit.com/adafruit-drv2605-haptic-controller-breakout/overview
+  https://github.com/adafruit/Adafruit_DRV2605_Library/blob/master/examples/realtime/realtime.ino
+
+* SleepyDog
+  https://github.com/adafruit/Adafruit_SleepyDog
+  http://interface.khm.de/index.php/lab/interfaces-advanced/sleep_watchdog_battery/
+
+* PIR
+  https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/example-projects
